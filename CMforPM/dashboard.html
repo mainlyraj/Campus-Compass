@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Compass — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="dashboard.html" aria-label="Campus Compass home">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-name">Campus Compass</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+        </nav>
+        <div class="auth-actions"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-institutional">
+        <div class="container">
+          <h1 class="hero-title">Lost & Found Dashboard</h1>
+          <p class="hero-subtitle">Report, search, and manage lost items</p>
+
+          <!-- Upload Section -->
+          <div id="upload-section" class="upload-section" style="margin: 30px 0; background: var(--card); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow);">
+            <h2 style="margin: 0 0 20px; color: var(--primary); font-size: 22px;">Upload Lost Item</h2>
+            <form id="upload-form" class="upload-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                <div>
+                  <label class="auth-label" for="item-title">Item Title *</label>
+                  <input id="item-title" type="text" required placeholder="e.g., Black Wallet" />
+                </div>
+                <div>
+                  <label class="auth-label" for="item-category">Category *</label>
+                  <select id="item-category" required>
+                    <option value="">Select category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="cards">Cards & IDs</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="books">Books & Notes</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                <div>
+                  <label class="auth-label" for="item-location">Location Found *</label>
+                  <select id="item-location" required>
+                    <option value="">Select location</option>
+                    <option value="library">Library</option>
+                    <option value="lecture-hall">Lecture Halls</option>
+                    <option value="cafeteria">Cafeteria</option>
+                    <option value="hostel">Hostels</option>
+                    <option value="sports">Sports Complex</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="auth-label" for="item-image">Image (Optional)</label>
+                  <input id="item-image" type="file" accept="image/*" />
+                </div>
+              </div>
+              <div style="margin-bottom: 16px;">
+                <label class="auth-label" for="item-description">Description *</label>
+                <textarea id="item-description" required rows="3" placeholder="Describe the item in detail..." style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid var(--border-dark); font-family: inherit; font-size: 15px;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Upload Item</button>
+            </form>
+          </div>
+
+          <!-- Search and Filter Section -->
+          <div class="filters-section" style="margin: 30px 0; background: var(--card); padding: 20px; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow);">
+            <h2 style="margin: 0 0 16px; color: var(--primary); font-size: 20px;">Search & Filter Items</h2>
+            <form id="search-filters" class="filters">
+              <input id="search-keyword" type="search" placeholder="Search by keyword..." />
+              <select id="filter-category">
+                <option value="">All categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="cards">Cards & IDs</option>
+                <option value="accessories">Accessories</option>
+                <option value="books">Books & Notes</option>
+                <option value="clothing">Clothing</option>
+                <option value="others">Others</option>
+              </select>
+              <select id="filter-location">
+                <option value="">All locations</option>
+                <option value="library">Library</option>
+                <option value="lecture-hall">Lecture Halls</option>
+                <option value="cafeteria">Cafeteria</option>
+                <option value="hostel">Hostels</option>
+                <option value="sports">Sports Complex</option>
+                <option value="other">Other</option>
+              </select>
+              <select id="filter-status">
+                <option value="">All status</option>
+                <option value="pending">Pending</option>
+                <option value="open">Open</option>
+                <option value="under claiming process">Under Claiming Process</option>
+                <option value="claimed">Claimed</option>
+                <option value="resolved">Resolved</option>
+              </select>
+              <button type="reset" class="btn btn-outline">Clear</button>
+            </form>
+          </div>
+
+          <!-- Conversations Section (Admin/Management only) -->
+          <div id="conversations-section" style="margin: 30px 0; background: var(--card); padding: 24px; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); display: none;">
+            <h2 style="margin: 0 0 20px; color: var(--primary); font-size: 22px;">All Conversations</h2>
+            <div id="conversations-list"></div>
+          </div>
+
+          <!-- Items Display Section -->
+          <div class="items-section">
+            <h2 style="margin: 0 0 20px; color: var(--primary); font-size: 24px;">All Lost Items</h2>
+            <div id="items-container" class="card-grid">
+              <!-- Items will be loaded here by JavaScript -->
+            </div>
+            <div id="no-items" style="display: none; text-align: center; padding: 40px; color: var(--text-dim);">
+              <p style="font-size: 18px;">No items found. Upload the first lost item!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">🧭</span>
+          <span class="brand-name">Campus Compass</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">© <span id="year"></span> Campus Compass</p>
+      </div>
+    </footer>
+
+    <script>
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    </script>
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+  </body>
+</html>
+

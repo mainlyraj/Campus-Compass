@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Compass — Lost & Found Management System</title>
+    <meta name="description" content="Campus Compass is a web-based Lost & Found Management System for college campuses." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="home.html" aria-label="Campus Compass home">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-name">Campus Compass</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+          </ul>
+        </nav>
+        <div class="auth-actions">
+          <a class="link dim" href="index.html">Sign in</a>
+          <a class="btn btn-pill btn-cta" href="signup.html">Sign up</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section with Login -->
+      <section class="hero-institutional">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1 class="hero-title">Campus Compass</h1>
+            <p class="hero-subtitle">Lost & Found Management System</p>
+            <p class="hero-description">A centralized platform for students and staff to report, search, and recover lost items securely and efficiently.</p>
+            
+            <!-- Notices Section -->
+            <div class="notices-section">
+              <h2>Notices</h2>
+              <div class="notice-list">
+                <div class="notice-item">
+                  <strong>New Feature:</strong> AI-powered item matching now available
+                </div>
+                <div class="notice-item">
+                  <strong>Important:</strong> All users must complete profile verification by end of semester
+                </div>
+                <div class="notice-item">
+                  <strong>Update:</strong> Mobile app coming soon - stay tuned!
+                </div>
+                <div class="notice-item">
+                  <strong>Reminder:</strong> Report found items within 24 hours for best results
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="login-sidebar" id="login-sidebar">
+            <div class="login-box">
+              <h2>Login</h2>
+              <form id="home-login-form" class="auth-form" novalidate>
+                <label class="auth-label" for="home-login-id">Login Id (Email/Student ID)</label>
+                <input id="home-login-id" name="loginId" type="text" placeholder="Enter your login ID" required />
+                
+                <label class="auth-label" for="home-login-password">Password</label>
+                <div class="password-field">
+                  <input id="home-login-password" name="password" type="password" placeholder="Enter password" required />
+                  <button class="pw-toggle" type="button" aria-label="Show password">Show</button>
+                </div>
+
+                <label class="auth-check">
+                  <input type="checkbox" id="remember-me" />
+                  <span>Remember Me</span>
+                </label>
+
+                <button class="btn btn-primary auth-submit" type="submit">Login</button>
+                <p class="auth-alt"><a href="#" class="link">Forgot Your Password?</a></p>
+              </form>
+            </div>
+
+            <div class="register-box">
+              <h3>Register</h3>
+              <p class="register-note">(For new users only)</p>
+              <form id="home-register-form" class="auth-form" novalidate>
+                <label class="auth-label" for="reg-id">Student ID / Email</label>
+                <input id="reg-id" name="regId" type="text" placeholder="Enter your ID" required />
+                
+                <label class="auth-label" for="reg-dob">Date of Birth</label>
+                <input id="reg-dob" name="dob" type="date" required />
+
+                <label class="auth-label" for="reg-role">Role</label>
+                <select id="reg-role" name="role" required>
+                  <option value="student">Student</option>
+                  <option value="management">Management</option>
+                  <option value="admin">Admin</option>
+                </select>
+
+                <button class="btn btn-secondary" type="submit">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How Does It Work Section -->
+      <section class="how-it-works">
+        <div class="container">
+          <h2 class="section-title">HOW DOES IT WORK?</h2>
+          <p class="section-subtitle">(For existing users)</p>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <h3>Login Yourself</h3>
+              <p>Login with your Email/Student ID and Password.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <h3>Update Profile</h3>
+              <p>Enter your correct email-id, mobile number and save your details.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <h3>Report or Search</h3>
+              <p>Post a found item with photo, location, and details—or search existing listings.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">04</div>
+              <h3>Claim Items</h3>
+              <p>Submit a claim with justification. Finders can ask verification questions.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">05</div>
+              <h3>Chat Securely</h3>
+              <p>Use the private chat to coordinate pickup while keeping contact info private.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">06</div>
+              <h3>Resolve & Close</h3>
+              <p>Once returned, mark resolved. Admins can moderate and handle disputes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Downloads Section -->
+      <section class="downloads-section">
+        <div class="container">
+          <h2 class="section-title">Downloads</h2>
+          <ul class="download-list">
+            <li><a href="#" class="download-link">📄 Item Report Form</a></li>
+            <li><a href="#" class="download-link">📄 Claim Verification Form</a></li>
+            <li><a href="#" class="download-link">📄 User Guide</a></li>
+            <li><a href="#" class="download-link">📄 Terms & Conditions</a></li>
+            <li><a href="#" class="download-link">📄 Privacy Policy</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="container">
+          <h2 class="section-title">Contact Us</h2>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <h3>Call</h3>
+              <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="contact-item">
+              <h3>E-Mail</h3>
+              <p>support@campuscompass.edu<br />admin@campuscompass.edu</p>
+            </div>
+            <div class="contact-item">
+              <h3>Address</h3>
+              <p>Campus Compass Office<br />Main Building, Room 101<br />College Campus<br />City, State - 12345</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">🧭</span>
+          <span class="brand-name">Campus Compass</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="admin.html">Admin</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">© <span id="year"></span> Copyright Campus Compass | Designed and Developed for College Campuses</p>
+      </div>
+    </footer>
+
+    <script>
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    </script>
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // Hide login sidebar if user is logged in
+      (function() {
+        function onReady(fn) {
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', fn, { once: true });
+          } else {
+            fn();
+          }
+        }
+        onReady(function() {
+          const authData = localStorage.getItem('cc_current_user');
+          if (authData) {
+            const sidebar = document.getElementById('login-sidebar');
+            if (sidebar) {
+              sidebar.innerHTML = '<div class="login-box"><h2>Welcome Back!</h2><p style="color: var(--text-dim); margin-bottom: 16px;">You are already logged in.</p><a href="dashboard.html" class="btn btn-primary" style="width: 100%;">Go to Dashboard</a></div>';
+            }
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

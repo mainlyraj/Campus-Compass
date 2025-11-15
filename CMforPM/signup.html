@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Compass — Sign up</title>
+    <meta name="description" content="Create your Campus Compass account." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="home.html" aria-label="Campus Compass home">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-name">Campus Compass</span>
+        </a>
+        <div class="auth-actions">
+          <a class="link dim" href="index.html">Sign in</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth hero-center">
+        <div class="container auth-container">
+          <div class="auth-card" role="region" aria-labelledby="signup-heading">
+            <h1 id="signup-heading" class="auth-title">Create account</h1>
+            <p class="auth-sub">Join Campus Compass</p>
+            <form id="signup-form" class="auth-form" novalidate>
+              <label class="auth-label" for="su-name">Full name</label>
+              <input id="su-name" name="name" type="text" autocomplete="name" placeholder="Enter your Name" required />
+
+              <label class="auth-label" for="su-email">Email</label>
+              <input id="su-email" name="email" type="email" autocomplete="email" placeholder="name@gamil.com" required />
+
+              <div class="password-field">
+                <label class="auth-label" for="su-password">Password</label>
+                <input id="su-password" name="password" type="password" autocomplete="new-password" placeholder="Create a strong password" required />
+                <button class="pw-toggle" type="button" aria-label="Show password">Show</button>
+              </div>
+
+              <label class="auth-label" for="su-role">Role</label>
+              <select id="su-role" name="role" required>
+                <option value="student">Student</option>
+                <option value="management">Management</option>
+                <option value="admin">Admin</option>
+              </select>
+
+              <label class="auth-check">
+                <input type="checkbox" id="su-terms" required />
+                <span>I agree to the terms and privacy policy</span>
+              </label>
+
+              <button class="btn btn-pill btn-primary-hero auth-submit" type="submit">Create account</button>
+              <p class="auth-alt">Already have an account? <a href="index.html" class="link">Sign in</a></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">🧭</span>
+          <span class="brand-name">Campus Compass</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Admin</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">© <span id="year"></span> Campus Compass</p>
+      </div>
+    </footer>
+
+    <script>
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    </script>
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+  </html>
+
+

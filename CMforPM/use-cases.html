@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Compass — Use Cases</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="home.html" aria-label="Campus Compass home">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-name">Campus Compass</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="features.html">Features</a></li>
+            <li><a aria-current="page" href="use-cases.html">Use Cases</a></li>
+          </ul>
+        </nav>
+        <div class="auth-actions"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-center">
+        <div class="container hero-stack">
+          <h1 class="display"><span>Built for</span><span class="accent">campus scenarios</span></h1>
+          <p class="subhead">Students, faculty, and admins can report, find, and resolve items quickly.</p>
+        </div>
+      </section>
+      <section class="featured">
+        <div class="container">
+          <div class="card-grid">
+            <article class="item-card"><div class="item-thumb"></div><div class="item-body"><h3 class="item-title">Library</h3><p class="item-meta">Track items left at study spaces and computer labs.</p></div></article>
+            <article class="item-card"><div class="item-thumb"></div><div class="item-body"><h3 class="item-title">Lecture halls</h3><p class="item-meta">Help recover IDs, notes, and devices between classes.</p></div></article>
+            <article class="item-card"><div class="item-thumb"></div><div class="item-body"><h3 class="item-title">Hostels</h3><p class="item-meta">Coordinate returns securely without sharing phone numbers.</p></div></article>
+            <article class="item-card"><div class="item-thumb"></div><div class="item-body"><h3 class="item-title">Events</h3><p class="item-meta">Centralize lost & found for fests and sports meets.</p></div></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand"><span class="brand-mark" aria-hidden="true">🧭</span><span class="brand-name">Campus Compass</span></div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Contact</a></li><li><a href="admin.html">Admin</a></li></ul>
+        </nav>
+        <p class="copyright">© <span id="year"></span> Campus Compass</p>
+      </div>
+    </footer>
+    <script>const yearEl=document.getElementById('year');if(yearEl)yearEl.textContent=String(new Date().getFullYear());</script>
+  </body>
+  </html>
+
+

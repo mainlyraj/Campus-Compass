@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Compass — Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="home.html" aria-label="Campus Compass home">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-name">Campus Compass</span>
+        </a>
+        <div class="auth-actions">
+          <a class="link dim" href="index.html">Sign out</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="admin hero-center">
+        <div class="container">
+          <h1 class="auth-title">Admin Dashboard</h1>
+          <p class="auth-sub">Monitor listings, claims, and users</p>
+
+          <div class="admin-grid">
+            <div class="admin-card">
+              <h2>Recent Listings</h2>
+              <table class="admin-table">
+                <thead>
+                  <tr><th>Item</th><th>Location</th><th>Status</th><th>Actions</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Black Wallet</td><td>Library</td><td>Open</td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+                  <tr><td>Wireless Earbuds</td><td>Cafeteria</td><td>Claimed</td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+                  <tr><td>Student ID Card</td><td>Lecture Hall</td><td>Open</td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="admin-card">
+              <h2>Open Claims</h2>
+              <ul class="admin-list">
+                <li><strong>ID #1023</strong> — Notebook — Pending verification</li>
+                <li><strong>ID #1017</strong> — Wallet — Awaiting finder response</li>
+                <li><strong>ID #1009</strong> — Earbuds — Resolved</li>
+              </ul>
+            </div>
+            <div class="admin-card">
+              <h2>Users</h2>
+              <ul class="admin-list">
+                <li>Alex J. — Student</li>
+                <li>Sam P. — Faculty</li>
+                <li>Admin — Admin</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">🧭</span>
+          <span class="brand-name">Campus Compass</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="admin.html">Admin</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">© <span id="year"></span> Campus Compass</p>
+      </div>
+    </footer>
+
+    <script>
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+  </html>
+
+

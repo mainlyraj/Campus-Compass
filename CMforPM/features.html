@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Compass — Features</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="home.html" aria-label="Campus Compass home">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-name">Campus Compass</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a aria-current="page" href="features.html">Features</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+          </ul>
+        </nav>
+        <div class="auth-actions"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero hero-center">
+        <div class="container hero-stack">
+          <h1 class="display"><span>Powerful features</span><span class="accent">for lost & found</span></h1>
+          <p class="subhead">Reporting, search, claims, private chat, and admin tools on a modern, secure platform.</p>
+        </div>
+      </section>
+      <section class="featured">
+        <div class="container">
+          <div class="card-grid">
+            <article class="item-card"><div class="item-thumb"></div><div class="item-body"><h3 class="item-title">Item Uploads</h3><p class="item-meta">Post found items with photos, categories, and locations.</p></div></article>
+            <article class="item-card"><div class="item-thumb"></div><div class="item-body"><h3 class="item-title">Smart Search</h3><p class="item-meta">Filter by keyword, category, and location.</p></div></article>
+            <article class="item-card"><div class="item-thumb"></div><div class="item-body"><h3 class="item-title">Claim Flow</h3><p class="item-meta">Submit claims with justification and verification questions.</p></div></article>
+            <article class="item-card"><div class="item-thumb"></div><div class="item-body"><h3 class="item-title">Private Chat</h3><p class="item-meta">Coordinate handoff without sharing personal info.</p></div></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand"><span class="brand-mark" aria-hidden="true">🧭</span><span class="brand-name">Campus Compass</span></div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Contact</a></li><li><a href="admin.html">Admin</a></li></ul>
+        </nav>
+        <p class="copyright">© <span id="year"></span> Campus Compass</p>
+      </div>
+    </footer>
+    <script>const yearEl=document.getElementById('year');if(yearEl)yearEl.textContent=String(new Date().getFullYear());</script>
+  </body>
+  </html>
+
+

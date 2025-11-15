@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus Compass — Sign in</title>
+    <meta name="description" content="Campus Compass is a web-based Lost & Found Management System for college campuses." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="home.html" aria-label="Campus Compass home">
+          <span class="brand-logo" aria-hidden="true"></span>
+          <span class="brand-name">Campus Compass</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="features.html">Features</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+          </ul>
+        </nav>
+        <div class="auth-actions"><a class="link dim" href="signup.html">Create account</a></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth hero-center">
+        <div class="container auth-container">
+          <div class="auth-card" role="region" aria-labelledby="login-heading">
+            <h1 id="login-heading" class="auth-title">Sign in</h1>
+            <p class="auth-sub">Access Campus Compass</p>
+            <form id="login-form" class="auth-form" action="home.html" method="get" novalidate>
+              <label class="auth-label" for="login-email">Email</label>
+              <input id="login-email" name="email" type="email" autocomplete="email" placeholder="name@college.edu" required />
+
+              <div class="password-field">
+                <label class="auth-label" for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+                <button class="pw-toggle" type="button" aria-label="Show password">Show</button>
+              </div>
+
+              <label class="auth-label" for="login-role">Role</label>
+              <select id="login-role" name="role" required>
+                <option value="student">Student</option>
+                <option value="management">Management</option>
+                <option value="admin">Admin</option>
+              </select>
+
+              <button class="btn btn-pill btn-primary-hero auth-submit" type="submit">Sign in</button>
+              <p class="auth-alt">No account? <a href="signup.html" class="link">Create one</a></p>
+            </form>
+            <noscript>
+              <p class="auth-alt">JavaScript is required for role-based redirect. Without JS, this form will go to the home page.</p>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <!-- Auth page has no additional sections -->
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">🧭</span>
+          <span class="brand-name">Campus Compass</span>
+        </div>
+        <nav aria-label="Footer">
+          <ul class="footer-nav">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Admin</a></li>
+          </ul>
+        </nav>
+        <p class="copyright">© <span id="year"></span> Campus Compass</p>
+      </div>
+    </footer>
+
+    <script>
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    </script>
+    <script src="assets/js/database.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+  </html>
+
+
